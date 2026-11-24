@@ -77,6 +77,8 @@ output/
   mails/            Mail-Entwürfe
   angebote/         Angebots-Entwürfe
 bonus/              Ausbaustufen zum Nachbauen, nicht Teil des Grundsetups
+teilnehmer/         Hackathon: pro Person ein Ordner mit Website-Auszug, Kontext, Übungstranskripten
+demo/               entsteht nach /setup: die verschobenen Demo-Daten
 ```
 
 ## Konventionen

@@ -1,3 +1,14 @@
+# Hackathon EO Rhine-Ruhr, 26.11.2026
+
+Vier Stunden, ein Ziel: Du baust aus deinen Gesprächen Kontext auf (die Asset Foundation) und erzeugst daraus LinkedIn-Posts in deiner Sprache.
+
+1. **Klonen und starten.** `git clone <repo-url> mein-os`, `cd mein-os`, `claude`.
+2. **Demo laufen sehen.** `/transkript` auf das NordSecure-Gespräch in `inbox/`. Schau, was in `meetings/`, `aufgaben.md`, `asset-foundation.md` und `output/` entsteht.
+3. **Eigener Kontext.** `/setup <dein-slug>` stellt das Repo auf deine Firma um (Ordner unter `teilnehmer/`, vom VM-Team vorbereitet). Steht dein Ordner nicht da: `/website <url>` und danach `/fake-transkript <slug>`, dann `/setup <slug>`.
+4. **Eigene Gespräche verarbeiten.** `/transkript` auf deine Gespräche. Sieh zu, wie die Foundation wächst. Danach `/post`.
+
+---
+
 # Company-OS Starter
 
 Ein Betriebssystem für dein Unternehmen, das in Dateien lebt statt im Chatfenster.
@@ -68,4 +79,4 @@ Kein Dashboard, keine Datenbank, keine Integration. Ein Ordner ist der Status, e
 
 ---
 
-*Alle Firmen, Namen, Zahlen und Zitate in diesem Repo sind erfunden.*
+*Alle Firmen, Namen, Zahlen und Zitate in der Demo sind erfunden. Die Website-Auszüge unter `teilnehmer/` stammen von öffentlichen Websites, die Transkripte dort sind fiktiv.*
