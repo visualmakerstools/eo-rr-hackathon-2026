@@ -10,7 +10,7 @@ Alles, was Claude über mich und mein Geschäft wissen muss, steht in dieser Dat
 
 ## Wer wir sind
 
-O/WONDER baut agentische Betriebssysteme für Unternehmen, die mit KI mehr schaffen wollen, ohne über Köpfe zu wachsen. Wir beraten nicht nur, wir setzen operativ um und übergeben ein System, das dem Kunden gehört und bleibt, wenn wir gehen.
+O/WONDER baut agentische Betriebssysteme für Unternehmen, die mit KI mehr schaffen wollen, ohne dafür ständig neu einstellen zu müssen. Wir beraten nicht nur, wir setzen operativ um und bauen Systeme, die mit jedem Gespräch dazulernen.
 
 Typische Kundschaft: wachsende Dienstleister und Agenturen zwischen 45 und 150 Mitarbeitenden im DACH-Raum. Sie sind keine KI-Skeptiker, sie sind schon dran und kommen nicht in die Skalierung.
 
