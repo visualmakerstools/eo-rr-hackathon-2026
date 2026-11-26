@@ -1,6 +1,6 @@
 ---
 name: angebot
-description: Schreibt einen Angebots-Entwurf nach output/angebote/YYYY-MM-DD_kunde_thema.md, aus einer Notiz aus meetings/ und der Kundensprache aus asset-foundation.md. Wird vom transkript-Skill nach Kundengesprächen aufgerufen, kann aber auch direkt vom User für ein konkretes Gespräch gestartet werden.
+description: Schreibt einen Angebots-Entwurf nach output/angebote/YYYY-MM-DD_kunde_thema.md, aus der Wiki-Seite eines Kunden (wiki/kunden/<firma>/brief.md) und der Kundensprache aus asset-foundation.md. Wird vom ingest-Skill nach Kundengesprächen aufgerufen, kann aber auch direkt vom User für ein konkretes Gespräch gestartet werden.
 ---
 
 # Angebot
@@ -9,7 +9,9 @@ Schreibt einen Angebots-Entwurf, konkret statt generisch.
 
 ## Immer zuerst lesen
 
-`CLAUDE.md` im Repo-Wurzelverzeichnis, besonders die Leistungstabelle und den Tagessatz. Dazu die Notiz aus `meetings/` und `asset-foundation.md` für die Kundensprache.
+Die eigene `learnings.md` neben dieser Datei, noch vor allem anderen.
+
+`CLAUDE.md` im Repo-Wurzelverzeichnis, besonders die Leistungstabelle und den Tagessatz. Dazu den `brief.md` des Kunden aus `wiki/kunden/<firma>/` (Stand, Verlauf, Zitate, Offene Punkte) und `asset-foundation.md` für die Kundensprache.
 
 ## Aufbau
 
@@ -29,7 +31,7 @@ Schreibt einen Angebots-Entwurf, konkret statt generisch.
 
 ## Ablegen
 
-Nach `output/angebote/YYYY-MM-DD_kunde_thema.md`, mit Quelle (Notiz + Foundation-Cluster) im Kopf. Entwurf im Chat zeigen und auf Feedback warten.
+Nach `output/angebote/YYYY-MM-DD_kunde_thema.md`, mit Quelle (Brief + Foundation-Cluster) im Kopf. Entwurf im Chat zeigen und auf Feedback warten.
 
 ## Grenzen
 

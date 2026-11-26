@@ -1,6 +1,6 @@
 # Bonus: Gmail-Radar
 
-Nicht Teil des Grundsetups, sondern eine Anleitung zum Nachbauen, wenn das Transkript-Routing läuft und der logische nächste Schritt ansteht: die Inbox selbst.
+Nicht Teil des Grundsetups, sondern eine Anleitung zum Nachbauen, wenn das Routing läuft und der logische nächste Schritt ansteht: die Inbox selbst.
 
 ## Idee
 
@@ -18,7 +18,7 @@ Der Gmail-Connector in Claude Code kann Mails **lesen** und **Drafts anlegen**. 
 
 ## Wie der Skill aussehen könnte
 
-Gleicher Aufbau wie die vier Skills hier: dünn, mit Verweis auf `CLAUDE.md` für Ton und Kontext.
+Gleicher Aufbau wie die Skills hier: dünn, mit Verweis auf `CLAUDE.md` für Ton und Kontext.
 
 - **Input:** Inbox scannen, ungelesene oder unbeantwortete Threads der letzten X Tage.
 - **Filter:** welche Threads brauchen wirklich eine Antwort? Newsletter, automatische Benachrichtigungen und bereits beantwortete Threads rausfiltern.
@@ -27,8 +27,8 @@ Gleicher Aufbau wie die vier Skills hier: dünn, mit Verweis auf `CLAUDE.md` fü
 
 ## Aufwand ehrlich eingeordnet
 
-Das ist kein Fünf-Minuten-Skill. Der OAuth-Setup ist einmalig, aber die Filterlogik (was braucht wirklich eine Antwort, was ist Rauschen) braucht ein paar Testläufe, bis sie zuverlässig läuft. Rechne mit Nachjustieren, wie beim Transkript-Routing am Anfang auch.
+Das ist kein Fünf-Minuten-Skill. Der OAuth-Setup ist einmalig, aber die Filterlogik (was braucht wirklich eine Antwort, was ist Rauschen) braucht ein paar Testläufe, bis sie zuverlässig läuft. Rechne mit Nachjustieren, wie beim Routing am Anfang auch.
 
 ## Warum das der nächste Schritt ist
 
-Das Transkript-Routing verarbeitet, was aus Gesprächen kommt. Die Inbox ist der zweite große Strom an unstrukturiertem Input, der täglich Antworten braucht. Gleiches Prinzip, andere Quelle.
+Der Ingest-Lauf verarbeitet, was aus Gesprächen kommt. Die Inbox ist der zweite große Strom an unstrukturiertem Input, der täglich Antworten braucht. Gleiches Prinzip, andere Quelle.

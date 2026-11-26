@@ -5,11 +5,13 @@ description: Erzeugt ein fiktives, realistisches Übungstranskript für einen Te
 
 # Fake-Transkript
 
-Erzeugt ein Gespräch, das so klingt, als hätte es stattgefunden, damit `/transkript` und `/post` etwas zu tun haben.
+Erzeugt ein Gespräch, das so klingt, als hätte es stattgefunden, damit `/ingest` und `/post` etwas zu tun haben.
 
 ## Immer zuerst lesen
 
-`teilnehmer/<slug>/website.md`, `claude-kontext.md` und `profil.md`. Dazu ein Rohtranskript aus `demo/inbox/` oder `meetings/raw/` als Formatvorbild (liegt dort nichts mehr, steht das Format unten).
+Die eigene `learnings.md` neben dieser Datei, noch vor allem anderen.
+
+`teilnehmer/<slug>/website.md`, `claude-kontext.md` und `profil.md`. Dazu ein Rohtranskript aus `demo/inbox/` oder `demo/wiki/kunden/*/raw/` als Formatvorbild (liegt dort nichts mehr, steht das Format unten).
 
 ## Ablauf
 
@@ -17,7 +19,7 @@ Erzeugt ein Gespräch, das so klingt, als hätte es stattgefunden, damit `/trans
 
 - `kundengespraech`: Erstgespräch mit einer plausiblen Person aus der Zielgruppe der Firma. Default.
 - `sparring`: zum Beispiel Podcast-Interview oder Austausch unter Gründern. Liefert Post-Stoff.
-- `team`: interne Runde.
+- `team`: Mitarbeitergespräch (Halbjahresgespräch o.ä.), vertraulich. Landet beim Ingest in `wiki/team/<person>/`.
 
 Ohne Art-Angabe und wenn in `teilnehmer/<slug>/inbox/` schon Transkripte liegen: die Art wählen, die noch fehlt. Die Art lässt sich am Dateinamen ablesen.
 

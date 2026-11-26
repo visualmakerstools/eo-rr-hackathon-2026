@@ -20,23 +20,24 @@
 
 ## Was ein gutes Ergebnis ist
 
-- **Notiz:** [Woran erkennst du, dass eine Gesprächsnotiz taugt?]
+- **Wiki-Seite (Brief):** [Woran erkennst du, dass eine Wiki-Seite taugt?]
 - **Aufgabe:** [...]
 - **Post:** [...]
 - **Mail:** [...]
 - **Angebot:** [...]
 
-Wenn etwas nicht im Transkript steht, wird es nicht erfunden. Dann kommt `[offen: im nächsten Call klären]` rein.
+Wenn etwas nicht im Dokument steht, wird es nicht erfunden. Dann kommt `[offen: im nächsten Call klären]` rein.
 
 ## Das Routing
 
-Kategorien an das Geschäft anpassen: Ein Steuerberater hat "Mandantengespräch", ein Coach "Klientensitzung", eine Produktchefin "User-Interview". Die vier Standardrollen (externes Gespräch mit Angebot, internes Meeting, Sparring/Impuls, Sonstiges) bleiben, nur die Namen und Erkennungsmerkmale ändern sich.
+Arten an das Geschäft anpassen: Ein Steuerberater hat "Mandantengespräch", ein Coach "Klientensitzung", eine Produktchefin "User-Interview". Die fünf Standardrollen (externes Gespräch mit Angebot, Mitarbeitergespräch, Finanzzahlen, Sparring/Impuls, Sonstiges) bleiben, nur die Namen, Erkennungsmerkmale und Wiki-Bereiche ändern sich. Die Bereiche sollen zu deinen eigenen Units oder Abteilungen passen.
 
-| Kategorie | Woran erkennbar | Was danach automatisch läuft |
-|-----------|-----------------|------------------------------|
-| **[Kategorie für Gespräche mit Interessenten oder Kundschaft]** | [Externe Person, Bedarf, Budget, nächster Schritt] | Notiz + Aufgaben + `foundation` + `angebot` als Entwurf + `mail` als Follow-up |
-| **[Interne Runde]** | [Team, Abstimmung, Entscheidungen] | Notiz + Aufgaben mit Zuständigkeit |
-| **[Sparring / Impuls]** | [Podcast, Austausch unter Gründern, lautes Denken] | Notiz + `post` als Draft |
-| **Sonstiges** | Passt in keine der drei | nur Notiz + Aufgaben |
+| Art | Woran erkennbar | Wohin im Wiki | Was danach läuft |
+|-----|-----------------|---------------|------------------|
+| **[Art für Gespräche mit Interessenten oder Kundschaft]** | [Externe Person, Bedarf, Budget, nächster Schritt] | `wiki/kunden/<firma>/` | Brief + Aufgaben + `foundation` + `angebot` als Entwurf + `mail` als Entwurf |
+| **[Mitarbeitergespräch]** | [Eine Person aus dem Team, Zufriedenheit, Entwicklung, Vereinbarungen] | `wiki/team/<person>/` | Brief + Aufgaben. Vertraulich, kein Output |
+| **[Finanzzahlen]** | [BWA oder Tabelle mit Monatswerten] | `wiki/finanzen/<YYYY-MM>/` | Brief mit Kennzahlen, Abweichungen zum Vormonat, Aufgaben |
+| **[Sparring / Impuls]** | [Podcast, Austausch unter Gründern, lautes Denken] | `wiki/themen/<slug>/` | Brief + `post` als Draft |
+| **Sonstiges** | Passt in keine der vier | nur Log-Eintrag | Aufgaben, nachfragen ob ins Wiki |
 
-Bei mehreren passenden Kategorien gewinnt die spezifischere. Bei Unklarheit fragt der `transkript`-Skill genau einmal nach, statt zu raten.
+Bei mehreren passenden Arten gewinnt die spezifischere. Bei Unklarheit fragt der `ingest`-Skill genau einmal nach, statt zu raten.

@@ -9,6 +9,8 @@ Baut aus einer öffentlichen Website den Startkontext für eine Firma.
 
 ## Immer zuerst lesen
 
+Die eigene `learnings.md` neben dieser Datei, noch vor allem anderen.
+
 `CLAUDE.md` (die vier Blöcke und das Routing als Muster) und `teilnehmer/_vorlage/`. Ohne die Vorlage weißt du nicht, welche Struktur gefragt ist.
 
 ## Ablauf
@@ -27,7 +29,7 @@ Nach der Struktur der Vorlage. Nur, was auf der Website steht. Wörtliche Claims
 
 ### 4. claude-kontext.md befüllen
 
-Die vier Blöcke und das Routing, aus `website.md` abgeleitet. Das Routing an das Geschäft anpassen: ein Steuerberater bekommt "Mandantengespräch", ein Coach "Klientensitzung", eine Agentur "Kundengespräch". Wie die Firma klingt, aus der Tonalität der Website ableiten (Du oder Sie, Stil). Duzen ist im Hackathon der Standard, weicht die Website ab, steht das als Hinweis dabei.
+Die vier Blöcke und das Routing, aus `website.md` abgeleitet. Das Routing (Art, Woran erkennbar, Wohin im Wiki, Was danach läuft) an das Geschäft anpassen: ein Steuerberater bekommt "Mandantengespräch", ein Coach "Klientensitzung", eine Agentur "Kundengespräch". Die Wiki-Bereiche passen zu den Units oder Abteilungen der Firma, soweit die Website sie hergibt, sonst die Standardbereiche (kunden, team, finanzen, themen). Wie die Firma klingt, aus der Tonalität der Website ableiten (Du oder Sie, Stil). Duzen ist im Hackathon der Standard, weicht die Website ab, steht das als Hinweis dabei.
 
 ### 5. profil.md
 
@@ -35,7 +37,7 @@ Name der Person, falls auf der Website zu finden (Team- oder Impressumsseite), s
 
 ### 6. Bericht und nächster Schritt
 
-Kurz melden: Slug, gelesene Seiten, wie viele Felder offen sind. Dann vorschlagen: `/fake-transkript <slug>` für Übungsmaterial, danach `/setup <slug>`.
+Kurz melden: Slug, gelesene Seiten, wie viele Felder offen sind. Dann vorschlagen: `/fake-transkript <slug>` für Übungsmaterial, danach `/setup <slug>`. Danach `/ingest`.
 
 ## Grenzen
 

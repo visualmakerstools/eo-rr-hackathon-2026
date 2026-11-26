@@ -16,7 +16,7 @@ Fast alle nutzen KI heute im Chat. Man fragt, bekommt etwas, kopiert es raus. Da
 
 Die meisten sitzen auf 01 und glauben, das nächste Tool bringt sie auf 04. Tut es nicht. Der Unterschied zwischen 01 und 03 ist keine Tool-Frage, sondern eine Frage der Vorbereitung.
 
-Dieses Repo liegt auf **Level 03 bis 04**: Der Transkript-Lauf arbeitet end-to-end durch, aber Mails und Angebote bleiben Entwürfe, bis du sie freigibst.
+Dieses Repo liegt auf **Level 03 bis 04**: Der Ingest-Lauf arbeitet end-to-end durch, aber Mails und Angebote bleiben Entwürfe, bis du sie freigibst.
 
 ## Drei Voraussetzungen
 
@@ -40,14 +40,14 @@ Entscheide, worauf das System zugreifen darf und was nie ohne dich passiert. Fan
 
 ### 2. Unternehmenswissen explizit machen
 
-Das, was in Köpfen, Decks und Slack steckt, muss an einen Ort, den eine Maschine lesen kann. Vier Fragen reichen für den Anfang:
+Das, was in Gesprächen, Decks und Slack steckt, muss an einen Ort, den eine Maschine lesen kann. Vier Fragen reichen für den Anfang:
 
 - Warum existiert das Unternehmen, und wo soll es in drei Jahren stehen?
 - Was verkauft ihr genau, zu welchen Konditionen?
 - Wer kauft das, und mit welchen Worten beschreibt diese Person ihr Problem?
 - Wie klingt ihr, und was sagt ihr nie?
 
-Das ist genau der Inhalt von `CLAUDE.md` und `asset-foundation.md` in diesem Repo. Die Foundation ist der Sonderfall: Sie schreibt sich nach dem ersten Mal selbst fort, weil jedes Kundengespräch neue Kundensprache liefert.
+Das ist genau der Inhalt von `CLAUDE.md` und `asset-foundation.md` in diesem Repo. Dazu kommt das Wiki unter `wiki/`: Es hält fest, was ihr über einzelne Kunden, Menschen und Monate wisst, und wächst mit jedem Dokument. Die Foundation ist der Sonderfall: Sie schreibt sich nach dem ersten Mal selbst fort, weil jedes Kundengespräch neue Kundensprache liefert.
 
 Diesen Schritt überspringt fast jeder, und danach klingen alle Ergebnisse nach niemandem.
 
@@ -71,13 +71,13 @@ Zwei Regeln, die den Unterschied machen:
 
 **Der Skill bleibt dünn.** Der ganze Kontext steht in `CLAUDE.md`, nicht im Skill. Sonst pflegst du dieselbe Information an fünf Stellen und irgendwann widersprechen sie sich.
 
-**Ein Skill, ein Job.** Der `transkript`-Skill hier verarbeitet und routet. Er schreibt keine Posts, dafür ruft er `post` auf. Das klingt umständlich und ist der Grund, warum du einzelne Teile austauschen kannst, ohne alles anzufassen.
+**Ein Skill, ein Job.** Der `ingest`-Skill hier sortiert ein und routet. Er schreibt keine Posts, dafür ruft er `post` auf. Das klingt umständlich und ist der Grund, warum du einzelne Teile austauschen kannst, ohne alles anzufassen.
 
 Am schnellsten baust du einen Skill, indem du Claude im Chat den Prozess einmal machen lässt, ihn korrigierst bis er stimmt, und dann sagst: "Schreib daraus einen Skill."
 
 ### 5. Den Prozess agentisieren
 
-Jetzt kommt der Sprung. Bisher tippst du `/transkript`. Ab jetzt läuft es von allein.
+Jetzt kommt der Sprung. Bisher tippst du `/ingest`. Ab jetzt läuft es von allein.
 
 Drei Dinge machen aus einem Skill einen Prozess:
 
@@ -85,7 +85,17 @@ Drei Dinge machen aus einem Skill einen Prozess:
 
 **Ein Router statt eines Kommandos.** Nicht du entscheidest, was passieren soll, sondern eine Regel. Genau dafür ist die Routing-Tabelle in `CLAUDE.md` da: Kategorie rein, Folgeprozess raus. Sie ist die eine Stelle, an der du das Verhalten des ganzen Systems änderst.
 
-**Eine Übergabestelle zwischen Skills.** Der `transkript`-Skill legt eine Notiz ab und gibt den Pfad an `post` weiter. Zwei Skills, die sich unterhalten, ohne dass du dazwischen sitzt. Das ist der eigentliche Moment, in dem Agents aus dem Chat aussteigen.
+**Eine Übergabestelle zwischen Skills.** Der `ingest`-Skill legt eine Wiki-Seite ab und gibt den Pfad an `post` weiter. Zwei Skills, die sich unterhalten, ohne dass du dazwischen sitzt. Das ist der eigentliche Moment, in dem Agents aus dem Chat aussteigen.
+
+## Die Stufen eines Wikis
+
+Ein Wiki aus Markdown-Dateien wächst in fünf Stufen. Du musst nicht alle auf einmal bauen.
+
+1. **Ablage:** Originale landen sortiert in `raw/` und werden nie verändert.
+2. **Verzeichnis:** `wiki/index.md` listet jede Seite mit einem Einzeiler, damit Claude (und du) nicht suchen müssen.
+3. **Ingest:** Neue Dokumente werden nicht nur abgelegt, sondern in die bestehende Seite eingearbeitet, mit Verlauf und Quelle.
+4. **Pflege:** `/lint` findet tote Verweise, veraltete Seiten und Widersprüche, bevor sie jemand im Gespräch bemerkt.
+5. **Lernen:** Korrekturen werden zu Regeln in der `learnings.md` neben dem Skill, und der nächste Lauf liest sie.
 
 ## Der Learning Loop
 
@@ -101,7 +111,7 @@ Ein automatisierter Prozess ist ab Tag eins veraltet. Was ihn lebendig hält, is
 
 Der Trick steckt in Schritt 03. "Der Text war nicht gut" ist keine Information. "Das war zu lang, wieder mal, und zwar immer an derselben Stelle" ist eine Regel.
 
-Praktisch: Leg neben jeden Skill eine `learnings.md` und lass den Skill sie vor jeder Ausführung lesen. Wenn du etwas zum zweiten Mal korrigierst, sag: "Schreib das in die Learnings." Nach zwei Wochen ist das die wertvollste Datei im Repo, weil dort dein Bauchgefühl steht, explizit gemacht.
+Praktisch: Neben jedem Skill liegt eine `learnings.md` (`.claude/skills/<skill>/learnings.md`), und der Skill liest sie als ersten Schritt vor jedem Lauf. Wenn du etwas zum zweiten Mal korrigierst, sag: "Schreib das in die Learnings." Dann kommt eine Zeile mit Datum, Anlass und Regel dazu. Einmal pro Woche 15 Minuten durchgehen, und höchstens eine Regel pro Woche in die `CLAUDE.md` hochziehen, sonst wird sie unlesbar. Nach zwei Wochen sind die Learnings die wertvollsten Dateien im Repo, weil dort dein Bauchgefühl steht, explizit gemacht.
 
 ## Wo du anfängst
 

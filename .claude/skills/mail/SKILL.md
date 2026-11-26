@@ -1,6 +1,6 @@
 ---
 name: mail
-description: Schreibt einen Mail-Entwurf nach output/mails/YYYY-MM-DD_empfaenger_thema.md, typisch als Follow-up nach einem Kundengespräch. Wird vom transkript-Skill nach Kundengesprächen aufgerufen, funktioniert aber für jede Mail mit einem Thema vom User.
+description: Schreibt einen Mail-Entwurf nach output/mails/YYYY-MM-DD_empfaenger_thema.md, typisch als Follow-up nach einem Kundengespräch. Wird vom ingest-Skill nach Kundengesprächen aufgerufen, funktioniert aber für jede Mail mit einem Thema vom User.
 ---
 
 # Mail
@@ -9,7 +9,9 @@ Schreibt einen Mail-Entwurf, nie eine fertig versendete Mail.
 
 ## Immer zuerst lesen
 
-`CLAUDE.md` im Repo-Wurzelverzeichnis, besonders Ton und die Kriterien für ein gutes Ergebnis. Dazu die zugehörige Notiz aus `meetings/`, wenn vorhanden.
+Die eigene `learnings.md` neben dieser Datei, noch vor allem anderen.
+
+`CLAUDE.md` im Repo-Wurzelverzeichnis, besonders Ton und die Kriterien für ein gutes Ergebnis. Dazu den zugehörigen `brief.md` aus `wiki/kunden/<firma>/`, wenn vorhanden.
 
 ## Ablauf
 

@@ -1,6 +1,6 @@
 ---
 name: foundation
-description: Webt Kundensprache aus Gesprächen in die lebende asset-foundation.md ein - Cluster nach Psychografie, 12-Zeilen-Framework pro Cluster. Wird vom transkript-Skill nach Kundengesprächen aufgerufen, kann aber auch direkt gestartet werden, wenn ein neues Gespräch oder eine neue Kundengruppe eingearbeitet werden soll.
+description: Webt Kundensprache aus Gesprächen in die lebende asset-foundation.md ein: Cluster nach Psychografie, 12-Zeilen-Framework pro Cluster. Wird vom ingest-Skill nach Kundengesprächen aufgerufen, kann aber auch direkt gestartet werden, wenn ein neues Gespräch oder eine neue Kundengruppe eingearbeitet werden soll.
 ---
 
 # Foundation
@@ -8,6 +8,8 @@ description: Webt Kundensprache aus Gesprächen in die lebende asset-foundation.
 Destilliert Kundengespräche zu einer strukturierten Foundation, dem Fundament für Posts, Mails und Angebote.
 
 ## Immer zuerst lesen
+
+Die eigene `learnings.md` neben dieser Datei, noch vor allem anderen.
 
 `CLAUDE.md` im Repo-Wurzelverzeichnis. Dort stehen Ton, Angebot und Kriterien für ein gutes Ergebnis.
 
@@ -34,7 +36,7 @@ Cluster nach Psychografie bilden, nicht nach Branche oder Firmengröße: gleiche
 | 3 | **Up at night** | Was hält sie nachts wach? Existenzielle Angst, nicht Features. |
 | 4 | **Frustrated by** | Woran scheitern sie täglich? Direkte Zitate. |
 | 5 | **Angry at** | Wer/Was hat ihr Vertrauen gebrochen? Wo wurden sie enttäuscht? |
-| 6 | **Tried but failed at** | Welche Lösungen haben sie schon versucht? Tools, Agenturen, Hires - konkret benennen. |
+| 6 | **Tried but failed at** | Welche Lösungen haben sie schon versucht? Tools, Agenturen, Hires, konkret benennen. |
 | 7 | **Trends & threats** | Welche Marktveränderungen bedrohen sie, wenn sie nicht handeln? |
 | 8 | **Cost of inaction** | Was passiert konkret, wenn sie nichts tun, mit Zeithorizont? |
 | 9 | **Solution / Vehicle** | Wie positioniert sich das eigene Angebot als Lösung, für diesen Cluster spezifisch? |
@@ -59,7 +61,7 @@ Am Ende in `asset-foundation.md`:
 
 ## Input
 
-Wird meist vom `transkript`-Skill mit dem Pfad zu einer frischen Notiz aus `meetings/` aufgerufen. Kann auch direkt vom User mit einem Thema oder mehreren Gesprächen gestartet werden ("web die letzten drei Gespräche in die Foundation ein").
+Wird meist vom `ingest`-Skill mit dem Pfad zu einem frischen `brief.md` aus `wiki/kunden/<firma>/` aufgerufen. Kann auch direkt vom User mit einem Thema oder mehreren Gesprächen gestartet werden ("web die letzten drei Gespräche in die Foundation ein").
 
 ## Grenzen
 

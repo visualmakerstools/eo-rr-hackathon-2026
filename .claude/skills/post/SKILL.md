@@ -1,6 +1,6 @@
 ---
 name: post
-description: Schreibt einen LinkedIn-Post-Draft nach output/posts/YYYY-MM-DD_slug.md, aus einer Notiz aus meetings/, einem Messaging-Goldstück aus asset-foundation.md oder einem Thema. Wird vom transkript-Skill nach Sparring-/Impuls-Gesprächen aufgerufen, kann aber auch direkt vom User mit einem Thema gestartet werden.
+description: Schreibt einen LinkedIn-Post-Draft nach output/posts/YYYY-MM-DD_slug.md, aus einem Brief aus wiki/ (z.B. wiki/themen/<slug>/brief.md), einem Messaging-Goldstück aus asset-foundation.md oder einem Thema. Wird vom ingest-Skill nach Sparring-/Impuls-Gesprächen aufgerufen, kann aber auch direkt vom User mit einem Thema gestartet werden.
 ---
 
 # Post
@@ -9,13 +9,15 @@ Schreibt einen einzelnen LinkedIn-Post-Draft im eigenen Stil.
 
 ## Immer zuerst lesen
 
+Die eigene `learnings.md` neben dieser Datei, noch vor allem anderen.
+
 `CLAUDE.md` im Repo-Wurzelverzeichnis, besonders die Abschnitte "Wie ich klinge" und "Was ein gutes Ergebnis ist". Dazu `asset-foundation.md` für Kundensprache und Messaging-Goldstücke.
 
 ## Ablauf
 
 ### 1. Quelle klären
 
-Eine Notiz aus `meetings/` (typisch Kategorie Sparring/Impuls), ein Messaging-Goldstück aus `asset-foundation.md`, oder ein Thema vom User.
+Ein Brief aus `wiki/themen/<slug>/` (typisch Art Sparring/Impuls) oder ein Kundenbrief aus `wiki/kunden/`, ein Messaging-Goldstück aus `asset-foundation.md`, oder ein Thema vom User.
 
 ### 2. Cluster-Bezug herstellen
 
@@ -44,7 +46,7 @@ Nach `output/posts/YYYY-MM-DD_slug.md`:
 # [Arbeitstitel]
 
 **Status:** Draft v1
-**Quelle:** [meetings/... / Foundation-Goldstück / Thema]
+**Quelle:** [wiki/... / Foundation-Goldstück / Thema]
 **Cluster:** [aus asset-foundation.md, falls zutreffend]
 
 ## v1
